@@ -21,7 +21,7 @@ body {
     body {
        <!--  background-color: #f00;
        -->
-             background-color: #4666FF;
+             background-color: blue;
     }
 }
 </style>
@@ -32,7 +32,7 @@ body {
 <!--    <h1 style="color=red">Marvel MCU Database</h1>
 -->
            <div class="tooltip">
-                   <h1 style="color:#f00;" >Marvel MCU Database</h1>
+                   <h1 style="color:blue;" >Marvel MCU Database</h1>
                       <span class="tooltiptext">MCU Database</span>
            </div>
          <p>

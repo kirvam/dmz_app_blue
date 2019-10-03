@@ -28,7 +28,7 @@ text-decoration: none;
 
 #redtable table, tr, td, th {
   /* border: 3px solid #f00;    */
-  border: 3px solid #4666FF  
+  border: 3px solid blue  
   /* border-collapse: collapse; */
   background-color:#E6E6FA;
   color:black;
@@ -208,7 +208,7 @@ font-size: 10px;
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: #f00;
+  background-color: blue;
   color: #fff;
   text-align: center;
   padding: 5px 0;
@@ -235,7 +235,7 @@ font-size: 10px;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #f00 transparent transparent transparent;
+  border-color: blue transparent transparent transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
