@@ -19,7 +19,9 @@ body {
 
 @media screen and (min-width: 480px) {
     body {
-        background-color: #f00;
+       <!--  background-color: #f00;
+       -->
+             background-color: #4666FF;
     }
 }
 </style>
