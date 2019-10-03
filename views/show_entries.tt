@@ -1,0 +1,88 @@
+[% IF session.logged_in %]
+    <form action="[% add_entry_url %]" method=post class=add-entry>
+      <dl>
+        <dt>Title:</dt>
+        <dd><input type=text size=30 name=title>
+        <dt>Rating:</dt>
+        <select name=rating>
+         <dd>
+           <option value="BLANK" size=30>--rating--</option>
+           <option value="1" size=30>1</option>
+           <option value="2" size=30>2</option>
+           <option value="3" size=30>3</option>
+           <option value="4" size=30>4</option>
+           <option value="5" size=30>5</option>
+           <option value="6" size=30>6</option>
+           <option value="7" size=30>7</option>
+           <option value="8" size=30>8</option>
+           <option value="9" size=30>9</option>
+           <option value="10" size=30>10</option>
+
+         </dd>
+        </select>
+        <dt>Phase:</dt>
+        <select name=phase>
+         <dd>
+           <option value="BLANK" size=30>--phase--</option>
+           <option value="Red" size=30>1</option>
+           <option value="Blue" size=30>2</option>
+           <option value="Purple" size=30>3</option>
+           <option value="Black" size=30>4</option>
+         </dd>
+        </select>
+        <dt>Year Published:</dt>
+        <dd><input type=text size=4 name=year_pub></dd>
+
+        <dt>Description:</dt>
+        <dd><textarea maclength=1000 placeholder="Add entry details here." autofocus name=description rows=5 cols=100></textarea>
+<!--
+        <dt>Status:</dt>
+        <select name=phase>
+         <dd>
+           <option value="BLANK" size=30>--status--</option>
+           <option value="Red" size=30>1</option>
+           <option value="Blue" size=30>2</option>
+            <option value="Purple" size=30>3</option>
+            <option value="Black" size=30>4</option>
+          </dd>
+         </select>
+-->
+         <p>
+        <dd><input title="click to submit entry" type=submit value=AddIt></dd>
+      </dl>
+    </form>
+  [% END %]
+<!--
+  <ul class=entries>
+    [% spectab %]
+    [% html %]
+  </ul>
+-->
+<!--
+  <ul class=entries>
+-->
+  <ul class="redtable">
+
+<!--  
+   <table id="rounded-corner" summary="MCU Listing" > 
+-->
+  <table summary="MCU Listing" cellspacing="0" > 
+  [% IF movies.size %]
+    [% FOREACH id IN movies.keys.nsort %]
+       <tr style="background-color:#E6E6FA; color:black; border-color:red" >
+       <td>[% movies.$id.movie_id %]</td>
+       <td>[% movies.$id.title %]</td>
+    <!--   <td>[% movies.$id.rating %]</td>
+      -->
+       <td>[% movies.$id.phase %]</td>
+       <td>[% movies.$id.year_pub %]</td>
+       <td>[% movies.$id.description %]</td>
+      </tr>
+    [% END %]
+</table>
+  [% ELSE %]
+  <p>
+    <li><em>Unbelievable.  No Movies so far</em></li>
+  </p>
+  [% END %]
+</ul>

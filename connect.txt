@@ -1,0 +1,26 @@
+
+
+
+get '/' => sub {
+     my $db = connect_db();
+     # my $sql = 'select id, req_n_id, req_n_parent, req_n_tag, req_n_type, req_n_progress, req_n_statusfile, req_n_note from req_note order by req_n_id';
+     my $sql = 'select movie_id, title, rating, phase, year_pub, left(description, 26) from movies';
+     my $sth = $db->prepare($sql) or die $db->errstr;
+      print "$db->errstr\n\n";
+
+       $sth->execute or die $sth->errstr;
+        print "$sth->errstr\n\n";
+        print "$sth->fetchall_hashref()\n\n";
+         #print Dumper \$sth->fetchall_hashref('req_n_id');
+          template 'show_entries.tt', {
+                                        'msg' => get_flash(),
+                              'add_entry_url' => uri_for('/add'),
+                                   #'req_note' => $sth->fetchall_hashref('req_n_id'),
+                                     'movies' => $sth->fetchall_hashref('movie_id'),
+                                #'req_n_note' => $sth->fetchall_hashref('req_n_id'),
+                                    'cheader' =>\@column_header
+     }
+|| die Template->error(), "\n";
+
+};
+

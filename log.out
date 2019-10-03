@@ -1,0 +1,54 @@
+DBI::st=HASH(0x18790d8)->errstr
+
+DBI::st=HASH(0x18790d8)->fetchall_hashref()
+
+$VAR1 = \{
+            '6' => {
+                     'left(description, 26)' => 'In the film, Nick Fury, di',
+                     'year_pub' => '2012',
+                     'movie_id' => 6,
+                     'phase' => 1,
+                     'title' => 'Marvel\'s The Avengers',
+                     'rating' => undef
+                   },
+            '4' => {
+                     'left(description, 26)' => 'The film sees Thor banishe',
+                     'year_pub' => '2011',
+                     'movie_id' => 4,
+                     'phase' => 1,
+                     'title' => 'THOR',
+                     'rating' => undef
+                   },
+            '1' => {
+                     'left(description, 26)' => 'Billionaire industrialist ',
+                     'year_pub' => '2008',
+                     'movie_id' => 1,
+                     'phase' => 1,
+                     'title' => 'Iron Man',
+                     'rating' => undef
+                   },
+            '3' => {
+                     'left(description, 26)' => 'Six months after the event',
+                     'year_pub' => '2010',
+                     'movie_id' => 3,
+                     'phase' => 1,
+                     'title' => 'Iron Man 2',
+                     'rating' => undef
+                   },
+            '2' => {
+                     'left(description, 26)' => 'In The Incredible Hulk, Br',
+                     'year_pub' => '2008',
+                     'movie_id' => 2,
+                     'phase' => 1,
+                     'title' => 'The Incredible Hulk',
+                     'rating' => undef
+                   },
+            '5' => {
+                     'left(description, 26)' => 'Set predominantly during W',
+                     'year_pub' => '2011',
+                     'movie_id' => 5,
+                     'phase' => 1,
+                     'title' => 'Captain America: The First Avenger',
+                     'rating' => undef
+                   }
+          };
